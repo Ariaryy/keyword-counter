@@ -5,13 +5,11 @@
 
 #include "lexer.h"
 #include "stb_ds.h"
-
 #include "types.h"
 #include "utils.h"
 
 MapEntry* keyword_map = NULL;
 MapEntry* identifier_map = NULL;
-
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
@@ -26,7 +24,6 @@ int main(int argc, char* argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    
     sh_new_strdup(keyword_map);
     sh_new_strdup(identifier_map);
 
@@ -34,10 +31,9 @@ int main(int argc, char* argv[]) {
 
     printf("\nKeywords Count:\n");
     print_map(keyword_map);
-    
+
     printf("\nIdentifiers Count:\n");
     print_map(identifier_map);
-
 
     return 0;
 }

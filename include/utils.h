@@ -3,6 +3,6 @@
 
 #include "types.h"
 
-void print_map(MapEntry *map);
+void print_map(MapEntry* map);
 
 #endif

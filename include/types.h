@@ -2,7 +2,7 @@
 #define TYPES_H
 
 typedef struct {
-    char *key;
+    char* key;
     int value;
 } MapEntry;
 
