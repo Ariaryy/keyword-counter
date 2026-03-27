@@ -1,24 +1,43 @@
+#define STB_DS_IMPLEMENTATION
+
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "lexer.h"
+#include "stb_ds.h"
+
+#include "types.h"
+#include "utils.h"
+
+MapEntry* keyword_map = NULL;
+MapEntry* identifier_map = NULL;
+
+
 int main(int argc, char* argv[]) {
     if (argc < 2) {
-        printf("Incorrect Usage.\n");
-        exit(1);
+        fprintf(stderr, "Usage: %s <input_file>\n", argv[0]);
+        exit(EXIT_FAILURE);
     }
 
     FILE* fptr = fopen(argv[1], "r");
 
     if (fptr == NULL) {
-        printf("There was an error opening the file.");
-        exit(1);
+        perror("Error opening file");
+        exit(EXIT_FAILURE);
     }
 
-    int c;
+    
+    sh_new_strdup(keyword_map);
+    sh_new_strdup(identifier_map);
 
-    while ((c = fgetc(fptr)) != EOF) {
-        printf("%c\n", c);
-    }
+    tokenize(fptr, &keyword_map, &identifier_map);
+
+    printf("\nKeywords Count:\n");
+    print_map(keyword_map);
+    
+    printf("\nIdentifiers Count:\n");
+    print_map(identifier_map);
+
 
     return 0;
 }

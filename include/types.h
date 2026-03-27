@@ -1,0 +1,9 @@
+#ifndef TYPES_H
+#define TYPES_H
+
+typedef struct {
+    char *key;
+    int value;
+} MapEntry;
+
+#endif
