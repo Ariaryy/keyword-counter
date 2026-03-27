@@ -24,9 +24,6 @@ int main(int argc, char* argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    sh_new_strdup(keyword_map);
-    sh_new_strdup(identifier_map);
-
     tokenize(fptr, &keyword_map, &identifier_map);
 
     printf("\nKeywords Count:\n");

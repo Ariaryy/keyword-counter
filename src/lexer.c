@@ -11,7 +11,7 @@
         int idx = shgeti(map, key);     \
         if (idx != -1) {                \
             (map)[idx].value++;         \
-        } else {                        \
+        } else {                        \   
             shput(map, strdup(key), 1); \
         }                               \
     } while (0)
