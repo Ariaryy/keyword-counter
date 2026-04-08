@@ -1,0 +1,20 @@
+int x;
+float y;
+
+x = 10;
+x = x + 5;
+
+
+int var1;
+float value2;
+var1 = value2;
+
+
+int _count;
+_count = 5;
+
+
+int a;
+int b;
+float c;
+a = b + c;

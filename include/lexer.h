@@ -5,6 +5,6 @@
 
 #include "types.h"
 
-void tokenize(FILE* f, MapEntry** keyword_map, MapEntry** identifier_map);
+int tokenize(FILE* f, MapEntry** keyword_map, MapEntry** identifier_map);
 
 #endif

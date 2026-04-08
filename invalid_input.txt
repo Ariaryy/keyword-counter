@@ -1,0 +1,12 @@
+int 123abc;
+
+int x$y;
+
+int /
+
+int x; // this is a comment
+
+this is a sentence;
+
+/* 
+incomplete comment
